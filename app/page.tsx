@@ -9,24 +9,28 @@ export default function HomePage() {
 
       {/* BACKGROUND GLOWS */}
 
-      <div className="absolute top-[-250px] left-[-250px] w-[700px] h-[700px] bg-[#6FA8E8] opacity-50 blur-[180px] rounded-full"></div>
+      <div className="absolute top-[-250px] left-[-250px] w-[700px] h-[700px] bg-[#79AEEF] opacity-45 blur-[180px] rounded-full"></div>
 
-      <div className="absolute bottom-[-250px] right-[-250px] w-[700px] h-[700px] bg-[#9D7BD8] opacity-45 blur-[180px] rounded-full"></div>
+      <div className="absolute bottom-[-250px] right-[-250px] w-[700px] h-[700px] bg-[#A384E6] opacity-40 blur-[180px] rounded-full"></div>
 
-      <div className="absolute top-[35%] left-[35%] w-[400px] h-[400px] bg-[#E8C8D1] opacity-25 blur-[130px] rounded-full"></div>
+      <div className="absolute top-[35%] left-[35%] w-[400px] h-[400px] bg-[#E8C8D1] opacity-20 blur-[130px] rounded-full"></div>
 
       {/* HERO */}
 
-      <section className="relative text-center py-44 px-6 bg-gradient-to-br from-[#7FB0F0] via-[#DCE9FF] to-[#9D7BD8] overflow-hidden">
+      <section className="relative text-center py-44 px-6 overflow-hidden bg-gradient-to-br from-[#7EAFF2] via-[#C9DBFF] to-[#9E83E8]">
+
+        {/* SOFT CONTRAST LAYER */}
+
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.45),transparent_65%)]"></div>
 
         <motion.div
           animate={{
-            scale: [1, 1.08, 1],
-            opacity: [0.4, 0.7, 0.4]
+            scale: [1, 1.06, 1],
+            opacity: [0.35, 0.55, 0.35]
           }}
           transition={{
             repeat: Infinity,
-            duration: 8
+            duration: 7
           }}
           className="absolute inset-0 bg-white blur-[120px]"
         />
@@ -39,13 +43,10 @@ export default function HomePage() {
           style={{
             textShadow:
               `
-              0 0 2px rgba(15,23,42,1),
-              0 0 5px rgba(15,23,42,1),
-              0 0 12px rgba(15,23,42,0.95),
-              0 0 24px rgba(255,255,255,1),
-              0 0 55px rgba(255,255,255,0.95),
-              0 0 95px rgba(255,255,255,0.85),
-              0 0 130px rgba(255,255,255,0.7)
+              0 0 12px rgba(255,255,255,1),
+              0 0 30px rgba(255,255,255,0.95),
+              0 0 65px rgba(255,255,255,0.9),
+              0 0 110px rgba(255,255,255,0.75)
               `
           }}
         >
@@ -56,7 +57,7 @@ export default function HomePage() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
-          className="relative z-10 mt-10 text-3xl text-[#14213D]"
+          className="relative z-10 mt-10 text-3xl text-[#17253D]"
         >
           Illuminate the Everyday
         </motion.p>
@@ -173,9 +174,10 @@ export default function HomePage() {
                 className="text-6xl mb-2"
                 style={{
                   fontFamily:
-                    '"Snell Roundhand", "Apple Chancery", "URW Chancery L", cursive',
+                    '"Baskerville", "Times New Roman", serif',
+                  fontStyle: "italic",
                   fontWeight: 500,
-                  letterSpacing: "0.03em"
+                  letterSpacing: "0.02em"
                 }}
               >
                 {item.title}
@@ -320,9 +322,9 @@ export default function HomePage() {
           <span
             style={{
               fontFamily:
-                '"Snell Roundhand", "Apple Chancery", "URW Chancery L", cursive',
-              fontSize: "1.35em",
-              fontWeight: 500
+                '"Baskerville", "Times New Roman", serif',
+              fontStyle: "italic",
+              fontSize: "1.2em"
             }}
           >
             light
